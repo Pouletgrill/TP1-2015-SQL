@@ -47,7 +47,7 @@
          // 
          // BTN_Next
          // 
-         this.BTN_Next.Location = new System.Drawing.Point(219, 96);
+         this.BTN_Next.Location = new System.Drawing.Point(387, 97);
          this.BTN_Next.Name = "BTN_Next";
          this.BTN_Next.Size = new System.Drawing.Size(26, 23);
          this.BTN_Next.TabIndex = 0;
@@ -56,7 +56,7 @@
          // 
          // BTN_Past
          // 
-         this.BTN_Past.Location = new System.Drawing.Point(184, 96);
+         this.BTN_Past.Location = new System.Drawing.Point(355, 97);
          this.BTN_Past.Name = "BTN_Past";
          this.BTN_Past.Size = new System.Drawing.Size(26, 23);
          this.BTN_Past.TabIndex = 1;
@@ -65,7 +65,7 @@
          // 
          // BTN_Add
          // 
-         this.BTN_Add.Location = new System.Drawing.Point(11, 33);
+         this.BTN_Add.Location = new System.Drawing.Point(11, 39);
          this.BTN_Add.Name = "BTN_Add";
          this.BTN_Add.Size = new System.Drawing.Size(106, 23);
          this.BTN_Add.TabIndex = 2;
@@ -75,7 +75,7 @@
          // 
          // BTN_Delete
          // 
-         this.BTN_Delete.Location = new System.Drawing.Point(11, 62);
+         this.BTN_Delete.Location = new System.Drawing.Point(11, 68);
          this.BTN_Delete.Name = "BTN_Delete";
          this.BTN_Delete.Size = new System.Drawing.Size(106, 23);
          this.BTN_Delete.TabIndex = 3;
@@ -85,7 +85,7 @@
          // 
          // BTN_ModDesc
          // 
-         this.BTN_ModDesc.Location = new System.Drawing.Point(11, 91);
+         this.BTN_ModDesc.Location = new System.Drawing.Point(11, 97);
          this.BTN_ModDesc.Name = "BTN_ModDesc";
          this.BTN_ModDesc.Size = new System.Drawing.Size(106, 23);
          this.BTN_ModDesc.TabIndex = 4;
@@ -98,7 +98,7 @@
          this.LISTB_Entreprise.FormattingEnabled = true;
          this.LISTB_Entreprise.Location = new System.Drawing.Point(132, 6);
          this.LISTB_Entreprise.Name = "LISTB_Entreprise";
-         this.LISTB_Entreprise.Size = new System.Drawing.Size(97, 43);
+         this.LISTB_Entreprise.Size = new System.Drawing.Size(281, 43);
          this.LISTB_Entreprise.TabIndex = 6;
          // 
          // panel1
@@ -106,7 +106,7 @@
          this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
          this.panel1.Location = new System.Drawing.Point(123, 6);
          this.panel1.Name = "panel1";
-         this.panel1.Size = new System.Drawing.Size(2, 108);
+         this.panel1.Size = new System.Drawing.Size(2, 114);
          this.panel1.TabIndex = 7;
          // 
          // label1
@@ -129,7 +129,7 @@
          // 
          this.label2.AutoSize = true;
          this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.label2.Location = new System.Drawing.Point(145, 54);
+         this.label2.Location = new System.Drawing.Point(146, 55);
          this.label2.Name = "label2";
          this.label2.Size = new System.Drawing.Size(65, 13);
          this.label2.TabIndex = 11;
@@ -140,7 +140,7 @@
          // 
          this.label3.AutoSize = true;
          this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.label3.Location = new System.Drawing.Point(131, 67);
+         this.label3.Location = new System.Drawing.Point(132, 68);
          this.label3.Name = "label3";
          this.label3.Size = new System.Drawing.Size(79, 13);
          this.label3.TabIndex = 12;
@@ -151,7 +151,7 @@
          // 
          this.label4.AutoSize = true;
          this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.label4.Location = new System.Drawing.Point(130, 80);
+         this.label4.Location = new System.Drawing.Point(131, 81);
          this.label4.Name = "label4";
          this.label4.Size = new System.Drawing.Size(80, 13);
          this.label4.TabIndex = 13;
@@ -160,36 +160,33 @@
          // 
          // LB_StageID
          // 
-         this.LB_StageID.AutoSize = true;
-         this.LB_StageID.Location = new System.Drawing.Point(216, 54);
+         this.LB_StageID.Location = new System.Drawing.Point(217, 55);
          this.LB_StageID.Name = "LB_StageID";
-         this.LB_StageID.Size = new System.Drawing.Size(35, 13);
+         this.LB_StageID.Size = new System.Drawing.Size(196, 13);
          this.LB_StageID.TabIndex = 14;
-         this.LB_StageID.Text = "label5";
+         this.LB_StageID.Text = "N/A";
          // 
          // LB_StageDesc
          // 
-         this.LB_StageDesc.AutoSize = true;
-         this.LB_StageDesc.Location = new System.Drawing.Point(216, 67);
+         this.LB_StageDesc.Location = new System.Drawing.Point(217, 68);
          this.LB_StageDesc.Name = "LB_StageDesc";
-         this.LB_StageDesc.Size = new System.Drawing.Size(35, 13);
+         this.LB_StageDesc.Size = new System.Drawing.Size(196, 13);
          this.LB_StageDesc.TabIndex = 15;
-         this.LB_StageDesc.Text = "label6";
+         this.LB_StageDesc.Text = "N/A";
          // 
          // LB_StageType
          // 
-         this.LB_StageType.AutoSize = true;
-         this.LB_StageType.Location = new System.Drawing.Point(216, 80);
+         this.LB_StageType.Location = new System.Drawing.Point(217, 81);
          this.LB_StageType.Name = "LB_StageType";
-         this.LB_StageType.Size = new System.Drawing.Size(35, 13);
+         this.LB_StageType.Size = new System.Drawing.Size(196, 13);
          this.LB_StageType.TabIndex = 16;
-         this.LB_StageType.Text = "label7";
+         this.LB_StageType.Text = "N/A";
          // 
          // FormPrincip
          // 
          this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
          this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-         this.ClientSize = new System.Drawing.Size(501, 347);
+         this.ClientSize = new System.Drawing.Size(425, 131);
          this.Controls.Add(this.LB_StageType);
          this.Controls.Add(this.LB_StageDesc);
          this.Controls.Add(this.LB_StageID);
