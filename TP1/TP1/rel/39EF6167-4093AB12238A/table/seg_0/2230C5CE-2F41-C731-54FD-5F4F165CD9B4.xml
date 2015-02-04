@@ -1,0 +1,59 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="2230C5CE-2F41-C731-54FD-5F4F165CD9B4" name="Etudiants">
+<createdBy>201354694</createdBy>
+<createdTime>2015-02-02 17:24:02 UTC</createdTime>
+<generatorID>Généré par l&apos;utilisateur</generatorID>
+<ownerDesignName>TP1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="NUMAD" id="06299CE2-487D-CD5C-87CC-8ACCDE2DCDEC">
+<createdBy>201354694</createdBy>
+<createdTime>2015-02-02 17:28:18 UTC</createdTime>
+<generatorID>Généré par l&apos;utilisateur</generatorID>
+<ownerDesignName>TP1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOM" id="5ABB29C0-D747-ABEA-31C6-102FFDD95E65">
+<createdBy>201354694</createdBy>
+<createdTime>2015-02-02 17:28:18 UTC</createdTime>
+<generatorID>Généré par l&apos;utilisateur</generatorID>
+<ownerDesignName>TP1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PRENOM" id="D1092AD8-8A2B-6674-CAAC-C3820B6C7D2D">
+<createdBy>201354694</createdBy>
+<createdTime>2015-02-02 17:28:18 UTC</createdTime>
+<generatorID>Généré par l&apos;utilisateur</generatorID>
+<ownerDesignName>TP1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="60AFB648-F3F2-58AE-BAF2-86C0D678426B" name="Etudiant_PK">
+<createdBy>201354694</createdBy>
+<createdTime>2015-02-02 17:28:18 UTC</createdTime>
+<generatorID>Généré par l&apos;utilisateur</generatorID>
+<ownerDesignName>TP1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="06299CE2-487D-CD5C-87CC-8ACCDE2DCDEC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

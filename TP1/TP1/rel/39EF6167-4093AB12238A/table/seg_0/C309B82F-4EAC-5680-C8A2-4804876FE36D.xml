@@ -1,0 +1,72 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C309B82F-4EAC-5680-C8A2-4804876FE36D" name="ENTREPRISES">
+<createdBy>201354694</createdBy>
+<createdTime>2015-02-02 17:34:50 UTC</createdTime>
+<generatorID>Généré par l&apos;utilisateur</generatorID>
+<ownerDesignName>TP1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="NUMENT" id="CD267364-B59A-569A-BA10-2FB1E2471A16">
+<createdBy>201354694</createdBy>
+<createdTime>2015-02-02 17:37:02 UTC</createdTime>
+<generatorID>Généré par l&apos;utilisateur</generatorID>
+<ownerDesignName>TP1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>6</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOMENT" id="FB5EB0D4-9200-67D6-AD58-6E02B0F521BD">
+<createdBy>201354694</createdBy>
+<createdTime>2015-02-02 17:37:02 UTC</createdTime>
+<generatorID>Généré par l&apos;utilisateur</generatorID>
+<ownerDesignName>TP1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ADRESSEENT" id="B8FE3E37-B37C-B3E4-17B4-C87E6046037C">
+<createdBy>201354694</createdBy>
+<createdTime>2015-02-02 17:37:02 UTC</createdTime>
+<generatorID>Généré par l&apos;utilisateur</generatorID>
+<ownerDesignName>TP1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TELENT" id="6DC50714-1234-7574-A51F-280D059826C5">
+<createdBy>201354694</createdBy>
+<createdTime>2015-02-02 17:37:02 UTC</createdTime>
+<generatorID>Généré par l&apos;utilisateur</generatorID>
+<ownerDesignName>TP1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="9D46DA69-2867-AD60-BFBA-38E1104C9F5F" name="ENTREPRISE_PK">
+<createdBy>201354694</createdBy>
+<createdTime>2015-02-02 17:37:02 UTC</createdTime>
+<generatorID>Généré par l&apos;utilisateur</generatorID>
+<ownerDesignName>TP1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CD267364-B59A-569A-BA10-2FB1E2471A16"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

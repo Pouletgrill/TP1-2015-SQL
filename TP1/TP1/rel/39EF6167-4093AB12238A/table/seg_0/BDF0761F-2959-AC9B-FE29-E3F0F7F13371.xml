@@ -1,0 +1,87 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="BDF0761F-2959-AC9B-FE29-E3F0F7F13371" name="POSTULER">
+<createdBy>201354694</createdBy>
+<createdTime>2015-02-03 14:52:56 UTC</createdTime>
+<generatorID>Généré par l&apos;utilisateur</generatorID>
+<ownerDesignName>TP1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="NUMAD" id="E69511D2-4DCC-5E5C-58B1-13091D4917C7">
+<createdBy>201354694</createdBy>
+<createdTime>2015-02-03 14:53:22 UTC</createdTime>
+<generatorID>Généré par l&apos;utilisateur</generatorID>
+<ownerDesignName>TP1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<delegate>06299CE2-487D-CD5C-87CC-8ACCDE2DCDEC</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B2EF6529-F2C8-4F97-58B4-70F06AB95EE6" referredColumn="06299CE2-487D-CD5C-87CC-8ACCDE2DCDEC"/>
+</associations>
+</Column>
+<Column name="NUMSTAGE" id="A86A6D59-8213-84F1-69D2-FC7A62E7975E">
+<createdBy>201354694</createdBy>
+<createdTime>2015-02-03 14:53:22 UTC</createdTime>
+<generatorID>Généré par l&apos;utilisateur</generatorID>
+<ownerDesignName>TP1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<delegate>2070B597-4120-0EA3-73AA-309FEBDBF2B5</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F5800EAC-6CBE-7AE2-0E1C-E206D80DCDA1" referredColumn="2070B597-4120-0EA3-73AA-309FEBDBF2B5"/>
+</associations>
+</Column>
+<Column name="PRIORITE" id="0B58CD2C-4D33-27AA-3C3B-5DA0723925FC">
+<createdBy>201354694</createdBy>
+<createdTime>2015-02-03 14:54:01 UTC</createdTime>
+<generatorID>Généré par l&apos;utilisateur</generatorID>
+<ownerDesignName>TP1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="81602B26-CC17-FB7F-A139-EF50AA52AE3C" name="POSTULER_PK">
+<createdBy>201354694</createdBy>
+<createdTime>2015-02-03 14:54:01 UTC</createdTime>
+<generatorID>Généré par l&apos;utilisateur</generatorID>
+<ownerDesignName>TP1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E69511D2-4DCC-5E5C-58B1-13091D4917C7"/>
+<colUsage columnID="A86A6D59-8213-84F1-69D2-FC7A62E7975E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="98AFA068-C005-E4E0-911E-E8BF07755DD3" name="POSTULER_Etudiants_FK">
+<createdBy>201354694</createdBy>
+<createdTime>2015-02-03 14:54:51 UTC</createdTime>
+<generatorID>Généré par l&apos;utilisateur</generatorID>
+<ownerDesignName>TP1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E69511D2-4DCC-5E5C-58B1-13091D4917C7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="37459B95-8FE3-4503-A3CD-7E6B925BF919" name="POSTULER_STAGES_FK">
+<createdBy>201354694</createdBy>
+<createdTime>2015-02-03 14:54:59 UTC</createdTime>
+<generatorID>Généré par l&apos;utilisateur</generatorID>
+<ownerDesignName>TP1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A86A6D59-8213-84F1-69D2-FC7A62E7975E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

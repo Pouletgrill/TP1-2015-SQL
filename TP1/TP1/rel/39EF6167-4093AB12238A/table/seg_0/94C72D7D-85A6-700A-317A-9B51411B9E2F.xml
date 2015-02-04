@@ -1,0 +1,59 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="94C72D7D-85A6-700A-317A-9B51411B9E2F" name="STAGES">
+<createdBy>201354694</createdBy>
+<createdTime>2015-02-02 17:29:14 UTC</createdTime>
+<generatorID>Généré par l&apos;utilisateur</generatorID>
+<ownerDesignName>TP1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="NUMSTAGE" id="2070B597-4120-0EA3-73AA-309FEBDBF2B5">
+<createdBy>201354694</createdBy>
+<createdTime>2015-02-02 17:30:06 UTC</createdTime>
+<generatorID>Généré par l&apos;utilisateur</generatorID>
+<ownerDesignName>TP1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Description" id="2CA5ED6A-2D96-EC06-4425-EB16177DBFCD">
+<createdBy>201354694</createdBy>
+<createdTime>2015-02-02 17:30:25 UTC</createdTime>
+<generatorID>Généré par l&apos;utilisateur</generatorID>
+<ownerDesignName>TP1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TYPESTG" id="E9302A74-09BA-67E1-6AC4-81F7E36AB73C">
+<createdBy>201354694</createdBy>
+<createdTime>2015-02-02 17:31:06 UTC</createdTime>
+<generatorID>Généré par l&apos;utilisateur</generatorID>
+<ownerDesignName>TP1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>3</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="AECC6ED8-CC42-78B0-9A41-FFDE3BA382E6" name="STAGES_PK">
+<createdBy>201354694</createdBy>
+<createdTime>2015-02-02 17:30:06 UTC</createdTime>
+<generatorID>Généré par l&apos;utilisateur</generatorID>
+<ownerDesignName>TP1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2070B597-4120-0EA3-73AA-309FEBDBF2B5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
