@@ -56,7 +56,7 @@ namespace TP1_ADO_NET
       private void RemplirListBox()
       {
 
-         String sqlcommande = "select NOMENT from " + LISTB_Entreprise.Text;
+         String sqlcommande = "select NOMENT from ENTREPRISES";
          try
          {
             OracleCommand orcd = new OracleCommand(sqlcommande, oraconn);
@@ -78,26 +78,26 @@ namespace TP1_ADO_NET
       ////////////////////////////////////////////
       //Remplit les STAGES FLECHES GAUCHE-DROITE//
       ////////////////////////////////////////////
-      private void InitEquipe()
+      private void StageBar()
       {
          try
          {
-            string sql2 = "select * from equipes";
+            string sql2 = "select * from "+ LISTB_Entreprise.Text;
 
             OracleDataAdapter Adapter2 = new OracleDataAdapter(sql2, oraconn);
-            if (monDataSet.Tables.Contains("equipes"))
+            if (monDataSet.Tables.Contains(LISTB_Entreprise.Text))
             {
-               monDataSet.Tables["equipes"].Clear();
+               monDataSet.Tables[LISTB_Entreprise.Text].Clear();
             }
 
-            Adapter2.Fill(monDataSet, "equipes");
+            Adapter2.Fill(monDataSet, LISTB_Entreprise.Text);
             Adapter2.Dispose();
             // on apelle la fonction lier pour faire
             // la liaison des données du DataSet avec les zones de text.
             //LierEquipe();
             //AffichageEquipe();
-            
-            if (this.BindingContext[monDataSet, "equipes"].Count <= 1)
+
+            if (this.BindingContext[monDataSet, LISTB_Entreprise.Text].Count <= 1)
             {
                
                BTN_Past.Enabled = false;
@@ -140,7 +140,7 @@ namespace TP1_ADO_NET
 
       private void LISTB_Entreprise_SelectedIndexChanged(object sender, EventArgs e)
       {
-         RemplirListBox();
+         StageBar();
       }
    }
 }
