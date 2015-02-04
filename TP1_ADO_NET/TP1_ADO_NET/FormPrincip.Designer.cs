@@ -75,7 +75,7 @@
          // 
          // BTN_Delete
          // 
-         this.BTN_Delete.Location = new System.Drawing.Point(11, 68);
+         this.BTN_Delete.Location = new System.Drawing.Point(11, 97);
          this.BTN_Delete.Name = "BTN_Delete";
          this.BTN_Delete.Size = new System.Drawing.Size(106, 23);
          this.BTN_Delete.TabIndex = 3;
@@ -85,7 +85,7 @@
          // 
          // BTN_ModDesc
          // 
-         this.BTN_ModDesc.Location = new System.Drawing.Point(11, 97);
+         this.BTN_ModDesc.Location = new System.Drawing.Point(11, 68);
          this.BTN_ModDesc.Name = "BTN_ModDesc";
          this.BTN_ModDesc.Size = new System.Drawing.Size(106, 23);
          this.BTN_ModDesc.TabIndex = 4;
@@ -100,6 +100,7 @@
          this.LISTB_Entreprise.Name = "LISTB_Entreprise";
          this.LISTB_Entreprise.Size = new System.Drawing.Size(281, 43);
          this.LISTB_Entreprise.TabIndex = 6;
+         this.LISTB_Entreprise.SelectedIndexChanged += new System.EventHandler(this.LISTB_Entreprise_SelectedIndexChanged);
          // 
          // panel1
          // 
@@ -204,6 +205,8 @@
          this.Controls.Add(this.BTN_Next);
          this.Name = "FormPrincip";
          this.Text = "Gestion";
+         this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormPrincip_FormClosing);
+         this.Load += new System.EventHandler(this.FormPrincip_Load);
          this.ResumeLayout(false);
          this.PerformLayout();
 

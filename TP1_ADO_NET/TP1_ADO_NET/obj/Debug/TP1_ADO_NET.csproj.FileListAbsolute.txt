@@ -8,3 +8,4 @@ C:\Users\201354694\Desktop\GitHub\TP1-2015-SQL\TP1_ADO_NET\TP1_ADO_NET\obj\Debug
 C:\Users\201354694\Desktop\GitHub\TP1-2015-SQL\TP1_ADO_NET\TP1_ADO_NET\obj\Debug\TP1_ADO_NET.csproj.GenerateResource.Cache
 C:\Users\201354694\Desktop\GitHub\TP1-2015-SQL\TP1_ADO_NET\TP1_ADO_NET\obj\Debug\TP1_ADO_NET.exe
 C:\Users\201354694\Desktop\GitHub\TP1-2015-SQL\TP1_ADO_NET\TP1_ADO_NET\obj\Debug\TP1_ADO_NET.pdb
+C:\Users\201354694\Desktop\GitHub\TP1-2015-SQL\TP1_ADO_NET\TP1_ADO_NET\obj\Debug\TP1_ADO_NET.GestionStage.resources
