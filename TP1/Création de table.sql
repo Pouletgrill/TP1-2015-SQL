@@ -164,16 +164,11 @@ where p.NUMSTAGE is null;
 --19
 select e.nom, e.prenom, p.NUMSTAGE  from etudiants e
 inner join postuler p on e.NUMAD = p.NUMAD
-where e.nom = (
+where p.NUMSTAGE in (
 select p.numstage 
 from etudiants e 
 inner join postuler p on e.NUMAD = p.NUMAD 
 where e.nom='valente');
-
-select p.numstage, e.nom 
-from etudiants e 
-inner join postuler p on e.NUMAD = p.NUMAD 
-where e.nom='valente';
 
 --20
 drop table etudiants;
