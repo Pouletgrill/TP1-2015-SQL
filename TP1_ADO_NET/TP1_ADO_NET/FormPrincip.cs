@@ -11,10 +11,10 @@ using System.Windows.Forms;
 
 namespace TP1_ADO_NET
 {
-   public partial class Form1 : Form
+   public partial class FormPrincip : Form
    {
       private OracleConnection oraconn = new OracleConnection();
-      public Form1()
+      public FormPrincip()
       {
          InitializeComponent();
       }
@@ -27,8 +27,7 @@ namespace TP1_ADO_NET
 
       private void BTN_Delete_Click(object sender, EventArgs e)
       {
-         GestionStage dlg = new GestionStage(oraconn, "DEL");
-         dlg.ShowDialog();
+         
       }
 
       private void BTN_ModDesc_Click(object sender, EventArgs e)
