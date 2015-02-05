@@ -15,6 +15,7 @@ namespace TP1_ADO_NET
    {
       private OracleConnection oraconn = new OracleConnection();
       bool connecter = false;
+      bool eventy = false;
       private DataSet monDataSet = new DataSet();
       public FormPrincip()
       {
@@ -82,27 +83,24 @@ namespace TP1_ADO_NET
       {
          try
          {
-            string sql2 = "select NUMSTAGE, DESCRIPTION, TYPESTG from stages where nument = "+
-                          "(select nument from ENTREPRISES where noment = '"+ LISTB_Entreprise.Text.ToLower() +"')";
-
-            OracleDataAdapter Adapter2 = new OracleDataAdapter(sql2, oraconn);
-            if (monDataSet.Tables.Contains("stages"))
-            {
-               monDataSet.Tables["stages"].Clear();
-            }
-
-            Adapter2.Fill(monDataSet, "stages");
-            Adapter2.Dispose();
-            // on apelle la fonction lier pour faire
-            // la liaison des données du DataSet avec les zones de text.
+             if (LISTB_Entreprise.Text == "")
+             {
+                 LISTB_Entreprise.SelectedIndex = 0;
+                 eventy = true;
+             }
+                 string sql = "select NUMSTAGE, DESCRIPTION, TYPESTG from stages where nument = "+
+                            "(select nument from ENTREPRISES where noment = '"+
+                            LISTB_Entreprise.Text.ToString().ToLower()+"')";
+                
+                 OracleDataAdapter Adapter = new OracleDataAdapter(sql, oraconn);
+                 Adapter.Fill(monDataSet, "stages");
+                 Adapter.Dispose();
+                 // on apelle la fonction lier pour faire
+                 // la liaison des données du DataSet avec les zones de text.
+             //}
             LB_StageID.DataBindings.Add("text", monDataSet, "stages.numstage");
-
-            if (this.BindingContext[monDataSet, LISTB_Entreprise.Text].Count <= 1)
-            {
-               
-               BTN_Past.Enabled = false;
-               BTN_Next.Enabled = false;
-            }
+            LB_StageDesc.DataBindings.Add("text", monDataSet, "stages.description");
+            LB_StageType.DataBindings.Add("text", monDataSet, "stages.typestg");
          }
          catch (OracleException ex)
          {
@@ -110,6 +108,43 @@ namespace TP1_ADO_NET
          }
       }
 
+       private void RefreshStage()
+      {
+          LB_StageID.DataBindings.Clear();
+          LB_StageDesc.DataBindings.Clear();
+          LB_StageType.DataBindings.Clear();         
+          //monDataSet.Clear();
+          try
+          {
+              //if (LISTB_Entreprise.SelectedItem != null)
+              //{
+              //    LISTB_Entreprise.SelectedIndex = 1;
+              //    MessageBox.Show(LISTB_Entreprise.Text.ToString());
+              //}
+              string sql2 = "select NUMSTAGE, DESCRIPTION, TYPESTG from stages where nument = " +
+                         "(select nument from ENTREPRISES where noment = '" +
+                         LISTB_Entreprise.Text.ToString().ToLower() + "')";
+
+              OracleDataAdapter Adapter = new OracleDataAdapter(sql2, oraconn);
+
+              Adapter.Fill(monDataSet, "stages");
+              Adapter.Dispose();
+              // on apelle la fonction lier pour faire
+              // la liaison des données du DataSet avec les zones de text.
+              //}
+              LB_StageID.DataBindings.Add("text", monDataSet, "stages.numstage");
+              LB_StageDesc.DataBindings.Add("text", monDataSet, "stages.description");
+              LB_StageType.DataBindings.Add("text", monDataSet, "stages.typestg");
+          }
+          catch (OracleException ex)
+          {
+              MessageBox.Show("ERREUR LISTE DES STAGES\n" + ex.ToString());
+          }
+      }
+
+       ////////////////////////////////////////
+       //Retourne NUMENT par rapport a NOMENT//
+       ////////////////////////////////////////
       public string GetNUMENT(string NOMENT)
       {
           OracleCommand oraComand = new OracleCommand("select nument from " + 
@@ -151,8 +186,9 @@ namespace TP1_ADO_NET
 
       private void FormPrincip_Load(object sender, EventArgs e)
       {
-         Connection();
-         RemplirListBox();         
+         Connection();         
+         RemplirListBox();
+         StageBar();         
       }
 
       private void FormPrincip_FormClosing(object sender, FormClosingEventArgs e)
@@ -162,7 +198,20 @@ namespace TP1_ADO_NET
 
       private void LISTB_Entreprise_SelectedIndexChanged(object sender, EventArgs e)
       {
-         StageBar();
+          if (eventy)
+          {
+              RefreshStage();
+          }
+      }
+
+      private void BTN_Next_Click(object sender, EventArgs e)
+      {
+         LB_StageID.BindingContext[monDataSet, "Stages"].Position += 1;
+      }
+
+      private void BTN_Past_Click(object sender, EventArgs e)
+      {
+          LB_StageID.BindingContext[monDataSet, "Stages"].Position -= 1;
       }
    }
 }

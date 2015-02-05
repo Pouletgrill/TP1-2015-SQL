@@ -15,8 +15,8 @@ C:\Users\utilisateur\Documents\GitHub\TP1-2015-SQL\TP1_ADO_NET\TP1_ADO_NET\obj\D
 C:\Users\utilisateur\Documents\GitHub\TP1-2015-SQL\TP1_ADO_NET\TP1_ADO_NET\bin\Debug\TP1_ADO_NET.exe
 C:\Users\utilisateur\Documents\GitHub\TP1-2015-SQL\TP1_ADO_NET\TP1_ADO_NET\bin\Debug\TP1_ADO_NET.pdb
 C:\Users\utilisateur\Documents\GitHub\TP1-2015-SQL\TP1_ADO_NET\TP1_ADO_NET\bin\Debug\Oracle.DataAccess.dll
-C:\Users\utilisateur\Documents\GitHub\TP1-2015-SQL\TP1_ADO_NET\TP1_ADO_NET\obj\Debug\TP1_ADO_NET.csprojResolveAssemblyReference.cache
 C:\Users\utilisateur\Documents\GitHub\TP1-2015-SQL\TP1_ADO_NET\TP1_ADO_NET\obj\Debug\TP1_ADO_NET.FormPrincip.resources
 C:\Users\utilisateur\Documents\GitHub\TP1-2015-SQL\TP1_ADO_NET\TP1_ADO_NET\obj\Debug\TP1_ADO_NET.GestionStage.resources
 C:\Users\utilisateur\Documents\GitHub\TP1-2015-SQL\TP1_ADO_NET\TP1_ADO_NET\obj\Debug\TP1_ADO_NET.Properties.Resources.resources
 C:\Users\utilisateur\Documents\GitHub\TP1-2015-SQL\TP1_ADO_NET\TP1_ADO_NET\obj\Debug\TP1_ADO_NET.csproj.GenerateResource.Cache
+C:\Users\utilisateur\Documents\GitHub\TP1-2015-SQL\TP1_ADO_NET\TP1_ADO_NET\obj\Debug\TP1_ADO_NET.csprojResolveAssemblyReference.cache
