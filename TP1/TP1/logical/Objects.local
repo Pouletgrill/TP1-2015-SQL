@@ -4,7 +4,7 @@
    <object objectType="Entity" objectID="A9B95F98-9215-87A1-543F-D7A3335812DF" name="Postuler" seqName="seg_0"/>
    <object objectType="Entity" objectID="BF98E907-81D1-9715-6B5E-7A4FF195839F" name="Stages" seqName="seg_0"/>
    <object objectType="Entity" objectID="C829F6F1-9476-8A05-DA29-D90D0C720F1D" name="Étudiants" seqName="seg_0"/>
-   <object objectType="Relation" objectID="A6FF74F0-F28F-ABE1-0ACD-1C12FFB3D6B6" name="Relation_2" seqName="seg_0"/>
    <object objectType="Relation" objectID="601A2300-511A-A600-EA98-2C1C5E5767F9" name="Relation_3" seqName="seg_0"/>
    <object objectType="Relation" objectID="77CCD15B-80DC-78DF-D59E-546FDB77FC22" name="Relation_5" seqName="seg_0"/>
+   <object objectType="Relation" objectID="A6FF74F0-F28F-ABE1-0ACD-1C12FFB3D6B6" name="Relation_2" seqName="seg_0"/>
 </oracle.dbtools.crest.model.design.logical.LogicalDesign>
