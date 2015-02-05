@@ -1,0 +1,62 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="978A65EA-BF7D-BB45-899A-8397999144E7" name="Entreprises">
+<createdBy>201354694</createdBy>
+<createdTime>2015-02-05 13:17:11 UTC</createdTime>
+<generatorID>Généré par l&apos;utilisateur</generatorID>
+<ownerDesignName>TP1</ownerDesignName>
+<engineerTo>
+<item key="39EF6167-1910-F24E-EE94-4093AB12238A" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="NomEnt" id="D620B4CC-6442-39E7-73BD-1AEB4FCAD141">
+<createdBy>201354694</createdBy>
+<createdTime>2015-02-05 13:22:16 UTC</createdTime>
+<generatorID>Généré par l&apos;utilisateur</generatorID>
+<ownerDesignName>TP1</ownerDesignName>
+<engineerTo>
+<item key="39EF6167-1910-F24E-EE94-4093AB12238A" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+</Attribute>
+<Attribute name="AdresseEnt" id="B282142C-A59B-1E6E-4A6E-1303D6ED6467">
+<createdBy>201354694</createdBy>
+<createdTime>2015-02-05 13:22:34 UTC</createdTime>
+<generatorID>Généré par l&apos;utilisateur</generatorID>
+<ownerDesignName>TP1</ownerDesignName>
+<engineerTo>
+<item key="39EF6167-1910-F24E-EE94-4093AB12238A" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+</Attribute>
+<Attribute name="TelEnt" id="1897C6AB-3ADD-6C49-1E6F-8A0F6850657B">
+<createdBy>201354694</createdBy>
+<createdTime>2015-02-05 13:22:59 UTC</createdTime>
+<generatorID>Généré par l&apos;utilisateur</generatorID>
+<ownerDesignName>TP1</ownerDesignName>
+<engineerTo>
+<item key="39EF6167-1910-F24E-EE94-4093AB12238A" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>14</dataTypeSize>
+</Attribute>
+</attributes>
+</Entity>

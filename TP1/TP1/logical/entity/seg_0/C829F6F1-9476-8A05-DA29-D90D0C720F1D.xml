@@ -1,0 +1,62 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="C829F6F1-9476-8A05-DA29-D90D0C720F1D" name="Étudiants">
+<createdBy>201354694</createdBy>
+<createdTime>2015-02-05 13:15:13 UTC</createdTime>
+<generatorID>Généré par l&apos;utilisateur</generatorID>
+<ownerDesignName>TP1</ownerDesignName>
+<engineerTo>
+<item key="39EF6167-1910-F24E-EE94-4093AB12238A" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Nom" id="5E3936F9-995E-BE04-A8B8-7FF0E24B502A">
+<createdBy>201354694</createdBy>
+<createdTime>2015-02-05 13:18:52 UTC</createdTime>
+<generatorID>Généré par l&apos;utilisateur</generatorID>
+<ownerDesignName>TP1</ownerDesignName>
+<engineerTo>
+<item key="39EF6167-1910-F24E-EE94-4093AB12238A" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+</Attribute>
+<Attribute name="Prenom" id="6A71F1D1-7DFC-5116-A115-3D3A80FE0AEB">
+<createdBy>201354694</createdBy>
+<createdTime>2015-02-05 13:19:31 UTC</createdTime>
+<generatorID>Généré par l&apos;utilisateur</generatorID>
+<ownerDesignName>TP1</ownerDesignName>
+<engineerTo>
+<item key="39EF6167-1910-F24E-EE94-4093AB12238A" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+</Attribute>
+<Attribute name="Telephone" id="F1DB4EAA-FCCD-20F8-BF71-F63F88FCEAA3">
+<createdBy>201354694</createdBy>
+<createdTime>2015-02-05 13:23:46 UTC</createdTime>
+<generatorID>Généré par l&apos;utilisateur</generatorID>
+<ownerDesignName>TP1</ownerDesignName>
+<engineerTo>
+<item key="39EF6167-1910-F24E-EE94-4093AB12238A" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>14</dataTypeSize>
+</Attribute>
+</attributes>
+</Entity>

@@ -41,6 +41,21 @@
 <dataTypeSize>3</dataTypeSize>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
+<Column name="NUMENT" id="287F07FB-2D5D-03EF-401A-9D99D324B9EA">
+<createdBy>201354694</createdBy>
+<createdTime>2015-02-05 13:13:29 UTC</createdTime>
+<generatorID>Généré par l&apos;utilisateur</generatorID>
+<ownerDesignName>TP1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>6</dataTypeSize>
+<delegate>CD267364-B59A-569A-BA10-2FB1E2471A16</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="DEAA807D-BB9D-434C-5310-85ABA9451EE1" referredColumn="CD267364-B59A-569A-BA10-2FB1E2471A16"/>
+</associations>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="AECC6ED8-CC42-78B0-9A41-FFDE3BA382E6" name="STAGES_PK">
@@ -53,6 +68,17 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="2070B597-4120-0EA3-73AA-309FEBDBF2B5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1E1903F4-8212-7807-37AC-90C014B50F0D" name="STAGES_ENTREPRISES_FK">
+<createdBy>201354694</createdBy>
+<createdTime>2015-02-05 13:13:41 UTC</createdTime>
+<generatorID>Généré par l&apos;utilisateur</generatorID>
+<ownerDesignName>TP1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="287F07FB-2D5D-03EF-401A-9D99D324B9EA"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

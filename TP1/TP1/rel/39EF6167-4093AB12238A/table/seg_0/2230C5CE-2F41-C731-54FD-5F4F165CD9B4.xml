@@ -41,6 +41,18 @@
 <dataTypeSize>30</dataTypeSize>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
+<Column name="TELEPHONE" id="7BC93574-D4A0-4C5D-A080-C16F3BCEAE84">
+<createdBy>201354694</createdBy>
+<createdTime>2015-02-05 13:23:40 UTC</createdTime>
+<generatorID>Généré par l&apos;utilisateur</generatorID>
+<ownerDesignName>TP1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>14</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="60AFB648-F3F2-58AE-BAF2-86C0D678426B" name="Etudiant_PK">
