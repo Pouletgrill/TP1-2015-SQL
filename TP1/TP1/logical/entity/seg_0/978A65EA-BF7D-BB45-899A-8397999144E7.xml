@@ -16,6 +16,19 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="NumEnt" id="587B0380-50A1-7759-825F-9974B1CC3CDE">
+<createdBy>201354694</createdBy>
+<createdTime>2015-02-05 13:40:51 UTC</createdTime>
+<generatorID>Généré par l&apos;utilisateur</generatorID>
+<ownerDesignName>TP1</ownerDesignName>
+<engineerTo>
+<item key="39EF6167-1910-F24E-EE94-4093AB12238A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>6</dataTypeSize>
+</Attribute>
 <Attribute name="NomEnt" id="D620B4CC-6442-39E7-73BD-1AEB4FCAD141">
 <createdBy>201354694</createdBy>
 <createdTime>2015-02-05 13:22:16 UTC</createdTime>
@@ -59,4 +72,19 @@
 <dataTypeSize>14</dataTypeSize>
 </Attribute>
 </attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="107EE7EF-56B5-F5A4-BDC5-7515048D70E4" name="{entity} PK">
+<createdBy>201354694</createdBy>
+<createdTime>2015-02-05 13:42:15 UTC</createdTime>
+<generatorID>Généré par l&apos;utilisateur</generatorID>
+<ownerDesignName>TP1</ownerDesignName>
+<engineerTo>
+<item key="39EF6167-1910-F24E-EE94-4093AB12238A" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>587B0380-50A1-7759-825F-9974B1CC3CDE</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
 </Entity>

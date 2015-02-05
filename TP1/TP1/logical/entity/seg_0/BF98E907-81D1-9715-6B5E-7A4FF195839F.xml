@@ -44,5 +44,19 @@
 <logicalDatatype>LOGDT025</logicalDatatype>
 <dataTypeSize>3</dataTypeSize>
 </Attribute>
+<Attribute name="NumEnt" id="FAA6873D-14D1-4AE8-5FCB-B4B9DA58D724">
+<createdBy>201354694</createdBy>
+<createdTime>2015-02-05 13:42:16 UTC</createdTime>
+<generatorID>601A2300-511A-A600-EA98-2C1C5E5767F9</generatorID>
+<ownerDesignName>TP1</ownerDesignName>
+<engineerTo>
+<item key="39EF6167-1910-F24E-EE94-4093AB12238A" value="true"/>
+</engineerTo>
+<referedAttribute>587B0380-50A1-7759-825F-9974B1CC3CDE</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>6</dataTypeSize>
+</Attribute>
 </attributes>
 </Entity>

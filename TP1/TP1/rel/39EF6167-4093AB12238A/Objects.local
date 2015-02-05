@@ -1,10 +1,10 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
 <oracle.dbtools.crest.model.design.relational.RelationalDesign>
-   <object objectType="Table" objectID="C309B82F-4EAC-5680-C8A2-4804876FE36D" name="ENTREPRISES" seqName="seg_0"/>
    <object objectType="Table" objectID="2230C5CE-2F41-C731-54FD-5F4F165CD9B4" name="Etudiants" seqName="seg_0"/>
-   <object objectType="Table" objectID="BDF0761F-2959-AC9B-FE29-E3F0F7F13371" name="POSTULER" seqName="seg_0"/>
    <object objectType="Table" objectID="94C72D7D-85A6-700A-317A-9B51411B9E2F" name="STAGES" seqName="seg_0"/>
-   <object objectType="FKIndexAssociation" objectID="DEAA807D-BB9D-434C-5310-85ABA9451EE1" name="STAGES_ENTREPRISES_FK" seqName="seg_0"/>
+   <object objectType="Table" objectID="BDF0761F-2959-AC9B-FE29-E3F0F7F13371" name="POSTULER" seqName="seg_0"/>
+   <object objectType="Table" objectID="C309B82F-4EAC-5680-C8A2-4804876FE36D" name="ENTREPRISES" seqName="seg_0"/>
    <object objectType="FKIndexAssociation" objectID="B2EF6529-F2C8-4F97-58B4-70F06AB95EE6" name="POSTULER_Etudiants_FK" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="DEAA807D-BB9D-434C-5310-85ABA9451EE1" name="STAGES_ENTREPRISES_FK" seqName="seg_0"/>
    <object objectType="FKIndexAssociation" objectID="F5800EAC-6CBE-7AE2-0E1C-E206D80DCDA1" name="POSTULER_STAGES_FK" seqName="seg_0"/>
 </oracle.dbtools.crest.model.design.relational.RelationalDesign>

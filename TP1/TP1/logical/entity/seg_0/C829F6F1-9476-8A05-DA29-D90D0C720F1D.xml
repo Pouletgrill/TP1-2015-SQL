@@ -16,6 +16,18 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="NumAd" id="D81A48F7-AFA9-C838-EF44-B23A227C84BB">
+<createdBy>201354694</createdBy>
+<createdTime>2015-02-05 13:31:31 UTC</createdTime>
+<generatorID>Généré par l&apos;utilisateur</generatorID>
+<ownerDesignName>TP1</ownerDesignName>
+<engineerTo>
+<item key="39EF6167-1910-F24E-EE94-4093AB12238A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+</Attribute>
 <Attribute name="Nom" id="5E3936F9-995E-BE04-A8B8-7FF0E24B502A">
 <createdBy>201354694</createdBy>
 <createdTime>2015-02-05 13:18:52 UTC</createdTime>
@@ -59,4 +71,19 @@
 <dataTypeSize>14</dataTypeSize>
 </Attribute>
 </attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="63B011DD-CF0B-89C2-2A11-118BFF2E85D4" name="{entity} PK">
+<createdBy>201354694</createdBy>
+<createdTime>2015-02-05 13:32:09 UTC</createdTime>
+<generatorID>Généré par l&apos;utilisateur</generatorID>
+<ownerDesignName>TP1</ownerDesignName>
+<engineerTo>
+<item key="39EF6167-1910-F24E-EE94-4093AB12238A" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>D81A48F7-AFA9-C838-EF44-B23A227C84BB</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
 </Entity>
