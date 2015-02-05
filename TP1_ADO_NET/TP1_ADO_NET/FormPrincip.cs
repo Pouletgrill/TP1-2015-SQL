@@ -82,20 +82,20 @@ namespace TP1_ADO_NET
       {
          try
          {
-            string sql2 = "select * from "+ LISTB_Entreprise.Text;
+            string sql2 = "select NUMSTAGE, DESCRIPTION, TYPESTG from stages where nument = "+
+                          "(select nument from ENTREPRISES where noment = '"+ LISTB_Entreprise.Text.ToLower() +"')";
 
             OracleDataAdapter Adapter2 = new OracleDataAdapter(sql2, oraconn);
-            if (monDataSet.Tables.Contains(LISTB_Entreprise.Text))
+            if (monDataSet.Tables.Contains("stages"))
             {
-               monDataSet.Tables[LISTB_Entreprise.Text].Clear();
+               monDataSet.Tables["stages"].Clear();
             }
 
-            Adapter2.Fill(monDataSet, LISTB_Entreprise.Text);
+            Adapter2.Fill(monDataSet, "stages");
             Adapter2.Dispose();
             // on apelle la fonction lier pour faire
             // la liaison des données du DataSet avec les zones de text.
-            //LierEquipe();
-            //AffichageEquipe();
+            LB_StageID.DataBindings.Add("text", monDataSet, "stages.numstage");
 
             if (this.BindingContext[monDataSet, LISTB_Entreprise.Text].Count <= 1)
             {
@@ -108,6 +108,28 @@ namespace TP1_ADO_NET
          {
             MessageBox.Show("ERREUR LISTE DES STAGES\n" + ex.ToString());
          }
+      }
+
+      public string GetNUMENT(string NOMENT)
+      {
+          OracleCommand oraComand = new OracleCommand("select nument from " + 
+              "entreprises where noment = :nomEnt", oraconn);
+          OracleParameter oraParam = new OracleParameter(":nomEnt", OracleDbType.NVarchar2);
+          
+          oraParam.Value = NOMENT;
+          oraComand.Parameters.Add(oraParam);
+          oraComand.CommandType = CommandType.Text;
+
+          OracleDataReader oraRead = oraComand.ExecuteReader();
+          if (oraRead.Read())
+          {
+              return oraRead.GetString(0); // Return NUMENT(entreprise)
+          }
+          else
+          {              
+              MessageBox.Show("Erreur, aucun NUMENT Trouver par rapport a l'entreprise");
+              return "*ERROR*";
+          }
       }
 
       private void BTN_Add_Click(object sender, EventArgs e)
