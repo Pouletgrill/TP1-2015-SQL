@@ -47,19 +47,21 @@ namespace TP1_ADO_NET
         private void RemplirGrilleTB()
         {
             TB_ID.Text = NumStagePrince;
-            OracleCommand oraComand = new OracleCommand("select DESCRIPTION, TYPESTG, NUMENT from Stages", oraconnGestion);
+            OracleCommand oraComand = new OracleCommand("select DESCRIPTION, TYPESTG, NUMENT from Stages " +
+                "where NUMSTAGE = " + NumStagePrince, oraconnGestion);
             OracleDataReader oraRead = oraComand.ExecuteReader();
             if (oraRead.Read())
             {
                 TB_Desc.Text = oraRead.GetString(0);
-                if (oraRead.GetString(1)=="ges")
+                if (oraRead.GetString(1) == "ges")
                 {
                     CB_Type.Text = "Gestion";
                 }
                 else
                 {
-                    CB_Type.Text = "Industrielle"
+                    CB_Type.Text = "Industrielle";
                 }
+                TB_Entreprise.Text = oraRead.GetString(2);
             }
             else
             {
@@ -89,7 +91,19 @@ namespace TP1_ADO_NET
 
         private void OK_Click(object sender, EventArgs e)
         {
-            if (!StageIDExist(TB_ID.Text) && EntrepriseExist(TB_Entreprise.Text.ToLower()) )
+            if (TypeElement == "MOD")
+            {
+                OK_MOD();
+            }
+            else
+            {
+                OK_ADD();
+            }
+        }
+
+        private void OK_ADD()
+        {
+            if (!StageIDExist(TB_ID.Text) && EntrepriseExist(TB_Entreprise.Text.ToLower()))
             {
                 AjouterStage();
                 this.Close();
@@ -97,6 +111,23 @@ namespace TP1_ADO_NET
             else
             {
                 MessageBox.Show("Des données sont éronnés, mal orthographiées, ou deja existente");
+            }
+        }
+        private void OK_MOD()
+        {
+            try
+            {
+                OracleCommand oraComand = new OracleCommand("update Stages set DESCRIPTION = '" +
+                    TB_Desc.Text + "' where NUMSTAGE = " +
+                    NumStagePrince.ToString(), oraconnGestion);
+                oraComand.ExecuteNonQuery();
+                MessageBox.Show("Modification réussi !");
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Attention, pour mettre un apostrophe, il faut le doubler\n"+
+                    "Ex: L'équipe -> L''équipe");
             }
         }
 
@@ -134,7 +165,7 @@ namespace TP1_ADO_NET
                 OracleDataReader oraRead = orcd.ExecuteReader();
                 while (!Trouver && oraRead.Read())
                 {
-                    if(oraRead.GetInt32(0).ToString() == ID)
+                    if (oraRead.GetInt32(0).ToString() == ID)
                     { Trouver = true; }
                 }
                 oraRead.Close();
