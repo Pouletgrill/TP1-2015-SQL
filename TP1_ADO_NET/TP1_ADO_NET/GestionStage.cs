@@ -15,11 +15,13 @@ namespace TP1_ADO_NET
     {
         public OracleConnection oraconnGestion = new OracleConnection();
         String TypeElement;
-        public GestionStage(OracleConnection oraconn, String Typez)
+        String NumStagePrince;
+        public GestionStage(OracleConnection oraconn, String Typez, String NumStage)
         {
             InitializeComponent();
             oraconnGestion = oraconn;
             TypeElement = Typez;
+            NumStagePrince = NumStage;
         }
 
         private void GestionStage_Load(object sender, EventArgs e)
@@ -38,6 +40,30 @@ namespace TP1_ADO_NET
                 //TB_Desc.Enabled = true;
                 CB_Type.Enabled = false;
                 TB_Entreprise.Enabled = false;
+                RemplirGrilleTB();
+            }
+        }
+
+        private void RemplirGrilleTB()
+        {
+            TB_ID.Text = NumStagePrince;
+            OracleCommand oraComand = new OracleCommand("select DESCRIPTION, TYPESTG, NUMENT from Stages", oraconnGestion);
+            OracleDataReader oraRead = oraComand.ExecuteReader();
+            if (oraRead.Read())
+            {
+                TB_Desc.Text = oraRead.GetString(0);
+                if (oraRead.GetString(1)=="ges")
+                {
+                    CB_Type.Text = "Gestion";
+                }
+                else
+                {
+                    CB_Type.Text = "Industrielle"
+                }
+            }
+            else
+            {
+                MessageBox.Show("Erreur Remplissage de grille");
             }
         }
 
@@ -61,21 +87,63 @@ namespace TP1_ADO_NET
             this.Close();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void OK_Click(object sender, EventArgs e)
         {
-            if (StageIDExist(TB_ID.Text))
+            if (!StageIDExist(TB_ID.Text) && EntrepriseExist(TB_Entreprise.Text.ToLower()) )
             {
                 AjouterStage();
                 this.Close();
             }
             else
             {
-                MessageBox.Show("Des données sont éronnés ou mal orthographiées");
+                MessageBox.Show("Des données sont éronnés, mal orthographiées, ou deja existente");
             }
         }
+
+        private bool EntrepriseExist(String Entreprise)
+        {
+            bool Trouver = false;
+            String sqlcommande = "select NOMENT from ENTREPRISES";
+            try
+            {
+                OracleCommand orcd = new OracleCommand(sqlcommande, oraconnGestion);
+                orcd.CommandType = CommandType.Text;
+                OracleDataReader oraRead = orcd.ExecuteReader();
+                while (!Trouver && oraRead.Read())
+                {
+                    if (oraRead.GetString(0).ToLower() == Entreprise)
+                    { Trouver = true; }
+                }
+                oraRead.Close();
+            }
+            catch (OracleException ex)
+            {
+                MessageBox.Show("ERREUR REMPLIR MATCHING ID\n" + ex.ToString());
+            }
+            return Trouver;
+        }
+
         private bool StageIDExist(String ID)
         {
-            return true;
+            bool Trouver = false;
+            String sqlcommande = "select NUMSTAGE from STAGES";
+            try
+            {
+                OracleCommand orcd = new OracleCommand(sqlcommande, oraconnGestion);
+                orcd.CommandType = CommandType.Text;
+                OracleDataReader oraRead = orcd.ExecuteReader();
+                while (!Trouver && oraRead.Read())
+                {
+                    if(oraRead.GetInt32(0).ToString() == ID)
+                    { Trouver = true; }
+                }
+                oraRead.Close();
+            }
+            catch (OracleException ex)
+            {
+                MessageBox.Show("ERREUR REMPLIR MATCHING ID\n" + ex.ToString());
+            }
+            return Trouver;
         }
 
         private void AjouterStage()

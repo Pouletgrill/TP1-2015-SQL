@@ -108,7 +108,7 @@
          this.BTN_OK.TabIndex = 5;
          this.BTN_OK.Text = "OK";
          this.BTN_OK.UseVisualStyleBackColor = true;
-         this.BTN_OK.Click += new System.EventHandler(this.button2_Click);
+         this.BTN_OK.Click += new System.EventHandler(this.OK_Click);
          // 
          // CB_Type
          // 

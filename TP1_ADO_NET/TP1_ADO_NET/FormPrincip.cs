@@ -169,19 +169,36 @@ namespace TP1_ADO_NET
 
       private void BTN_Add_Click(object sender, EventArgs e)
       {
-         GestionStage dlg = new GestionStage(oraconn, "ADD");
+         GestionStage dlg = new GestionStage(oraconn, "ADD", "");
          dlg.ShowDialog();
       }
 
       private void BTN_Delete_Click(object sender, EventArgs e)
       {
-         
+          String SQL3 = "DELETE FROM STAGES WHERE NUMSTAGE = " + textBox1.Text;
+          if (StageIDExist(textBox1.Text))
+          {
+              OracleCommand OCDEL = new OracleCommand(SQL3, oraconn);
+              OCDEL.ExecuteNonQuery();
+              MessageBox.Show("Stage Suprimé avec succes");
+          }
+          else
+          {
+              MessageBox.Show("Identifient de Stage Invalide");
+          }
       }
 
       private void BTN_ModDesc_Click(object sender, EventArgs e)
       {
-         GestionStage dlg = new GestionStage(oraconn, "MOD");
-         dlg.ShowDialog();
+         if (StageIDExist(textBox1.Text))
+         {
+             GestionStage dlg = new GestionStage(oraconn, "MOD", textBox1.Text);
+             dlg.ShowDialog();
+         }
+         else
+         {
+             MessageBox.Show("Identifient de Stage Invalide");
+         }
       }
 
       private void FormPrincip_Load(object sender, EventArgs e)
@@ -212,6 +229,29 @@ namespace TP1_ADO_NET
       private void BTN_Past_Click(object sender, EventArgs e)
       {
           LB_StageID.BindingContext[monDataSet, "Stages"].Position -= 1;
+      }
+
+      private bool StageIDExist(String ID)
+      {
+          bool Trouver = false;
+          String sqlcommande = "select NUMSTAGE from STAGES";
+          try
+          {
+              OracleCommand orcd = new OracleCommand(sqlcommande, oraconn);
+              orcd.CommandType = CommandType.Text;
+              OracleDataReader oraRead = orcd.ExecuteReader();
+              while (!Trouver && oraRead.Read())
+              {
+                  if (oraRead.GetInt32(0).ToString() == ID)
+                  { Trouver = true; }
+              }
+              oraRead.Close();
+          }
+          catch (OracleException ex)
+          {
+              MessageBox.Show("ERREUR REMPLIR MATCHING ID\n" + ex.ToString());
+          }
+          return Trouver;
       }
    }
 }
