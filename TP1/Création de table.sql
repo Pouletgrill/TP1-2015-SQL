@@ -180,6 +180,6 @@ inner join postuler p on e.NUMAD = p.NUMAD
 where e.nom='valente' and e.PRENOM = 'olivier';
 
 
-
+commit;
 
 
